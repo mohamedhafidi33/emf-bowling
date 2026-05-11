@@ -10,4 +10,22 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="players" upperBound="-1"
         eType="#//Player" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Tournament">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="matchup" eType="#//Matchup"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//TournamentType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Matchup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="games" upperBound="2" eType="#//Game"
+        containment="true" eOpposite="#//Game/matchup"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Game">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="matchup" eType="#//Matchup"
+        eOpposite="#//Matchup/games"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="player" eType="#//Player"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TournamentType">
+    <eLiterals name="Pro"/>
+    <eLiterals name="Amateur" value="1"/>
+  </eClassifiers>
 </ecore:EPackage>

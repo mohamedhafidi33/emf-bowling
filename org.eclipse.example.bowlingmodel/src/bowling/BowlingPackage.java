@@ -4,6 +4,7 @@ package bowling;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -150,6 +151,146 @@ public interface BowlingPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link bowling.impl.TournamentImpl <em>Tournament</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see bowling.impl.TournamentImpl
+	 * @see bowling.impl.BowlingPackageImpl#getTournament()
+	 * @generated
+	 */
+	int TOURNAMENT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Matchup</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOURNAMENT__MATCHUP = 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOURNAMENT__TYPE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Tournament</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOURNAMENT_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Tournament</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOURNAMENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link bowling.impl.MatchupImpl <em>Matchup</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see bowling.impl.MatchupImpl
+	 * @see bowling.impl.BowlingPackageImpl#getMatchup()
+	 * @generated
+	 */
+	int MATCHUP = 3;
+
+	/**
+	 * The feature id for the '<em><b>Games</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATCHUP__GAMES = 0;
+
+	/**
+	 * The number of structural features of the '<em>Matchup</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATCHUP_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Matchup</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATCHUP_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link bowling.impl.GameImpl <em>Game</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see bowling.impl.GameImpl
+	 * @see bowling.impl.BowlingPackageImpl#getGame()
+	 * @generated
+	 */
+	int GAME = 4;
+
+	/**
+	 * The feature id for the '<em><b>Matchup</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME__MATCHUP = 0;
+
+	/**
+	 * The feature id for the '<em><b>Player</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME__PLAYER = 1;
+
+	/**
+	 * The number of structural features of the '<em>Game</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Game</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link bowling.TournamentType <em>Tournament Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see bowling.TournamentType
+	 * @see bowling.impl.BowlingPackageImpl#getTournamentType()
+	 * @generated
+	 */
+	int TOURNAMENT_TYPE = 5;
+
+
+	/**
 	 * Returns the meta object for class '{@link bowling.Player <em>Player</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -212,6 +353,101 @@ public interface BowlingPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLeague_Players();
+
+	/**
+	 * Returns the meta object for class '{@link bowling.Tournament <em>Tournament</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Tournament</em>'.
+	 * @see bowling.Tournament
+	 * @generated
+	 */
+	EClass getTournament();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link bowling.Tournament#getMatchup <em>Matchup</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Matchup</em>'.
+	 * @see bowling.Tournament#getMatchup()
+	 * @see #getTournament()
+	 * @generated
+	 */
+	EReference getTournament_Matchup();
+
+	/**
+	 * Returns the meta object for the attribute '{@link bowling.Tournament#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see bowling.Tournament#getType()
+	 * @see #getTournament()
+	 * @generated
+	 */
+	EAttribute getTournament_Type();
+
+	/**
+	 * Returns the meta object for class '{@link bowling.Matchup <em>Matchup</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Matchup</em>'.
+	 * @see bowling.Matchup
+	 * @generated
+	 */
+	EClass getMatchup();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link bowling.Matchup#getGames <em>Games</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Games</em>'.
+	 * @see bowling.Matchup#getGames()
+	 * @see #getMatchup()
+	 * @generated
+	 */
+	EReference getMatchup_Games();
+
+	/**
+	 * Returns the meta object for class '{@link bowling.Game <em>Game</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Game</em>'.
+	 * @see bowling.Game
+	 * @generated
+	 */
+	EClass getGame();
+
+	/**
+	 * Returns the meta object for the container reference '{@link bowling.Game#getMatchup <em>Matchup</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Matchup</em>'.
+	 * @see bowling.Game#getMatchup()
+	 * @see #getGame()
+	 * @generated
+	 */
+	EReference getGame_Matchup();
+
+	/**
+	 * Returns the meta object for the reference '{@link bowling.Game#getPlayer <em>Player</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Player</em>'.
+	 * @see bowling.Game#getPlayer()
+	 * @see #getGame()
+	 * @generated
+	 */
+	EReference getGame_Player();
+
+	/**
+	 * Returns the meta object for enum '{@link bowling.TournamentType <em>Tournament Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Tournament Type</em>'.
+	 * @see bowling.TournamentType
+	 * @generated
+	 */
+	EEnum getTournamentType();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -287,6 +523,86 @@ public interface BowlingPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LEAGUE__PLAYERS = eINSTANCE.getLeague_Players();
+
+		/**
+		 * The meta object literal for the '{@link bowling.impl.TournamentImpl <em>Tournament</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see bowling.impl.TournamentImpl
+		 * @see bowling.impl.BowlingPackageImpl#getTournament()
+		 * @generated
+		 */
+		EClass TOURNAMENT = eINSTANCE.getTournament();
+
+		/**
+		 * The meta object literal for the '<em><b>Matchup</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TOURNAMENT__MATCHUP = eINSTANCE.getTournament_Matchup();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TOURNAMENT__TYPE = eINSTANCE.getTournament_Type();
+
+		/**
+		 * The meta object literal for the '{@link bowling.impl.MatchupImpl <em>Matchup</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see bowling.impl.MatchupImpl
+		 * @see bowling.impl.BowlingPackageImpl#getMatchup()
+		 * @generated
+		 */
+		EClass MATCHUP = eINSTANCE.getMatchup();
+
+		/**
+		 * The meta object literal for the '<em><b>Games</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MATCHUP__GAMES = eINSTANCE.getMatchup_Games();
+
+		/**
+		 * The meta object literal for the '{@link bowling.impl.GameImpl <em>Game</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see bowling.impl.GameImpl
+		 * @see bowling.impl.BowlingPackageImpl#getGame()
+		 * @generated
+		 */
+		EClass GAME = eINSTANCE.getGame();
+
+		/**
+		 * The meta object literal for the '<em><b>Matchup</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GAME__MATCHUP = eINSTANCE.getGame_Matchup();
+
+		/**
+		 * The meta object literal for the '<em><b>Player</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GAME__PLAYER = eINSTANCE.getGame_Player();
+
+		/**
+		 * The meta object literal for the '{@link bowling.TournamentType <em>Tournament Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see bowling.TournamentType
+		 * @see bowling.impl.BowlingPackageImpl#getTournamentType()
+		 * @generated
+		 */
+		EEnum TOURNAMENT_TYPE = eINSTANCE.getTournamentType();
 
 	}
 
